@@ -52,8 +52,9 @@ app.use((req, res) => {
   res.status(404).render("404", { user:req.user,title: "404" });
 });
 
-app.listen(port, () => {
-    console.log(`conected with port ${port}`)
-})
+const HOST = "0.0.0.0";
+app.listen(port, HOST, () => {
+  console.log(`conected with port ${port}`);
+});
 
 
